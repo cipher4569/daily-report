@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Daily Transactions Reports</title>
+    <style>
+                @font-face {
+            font-family: "br_firma";
+            src: url("./fonts/br_firma_extra_light_italic-webfont.woff2") format("woff2"), url("./fonts/br_firma_extra_light_italic-webfont.woff") format("woff");
+            font-weight: 200;
+            font-style: italic;
+        }
+
+        @font-face {
+            font-family: "br_firma";
+            src: url("./fonts/br_firma_extra_light-webfont.woff2") format("woff2"), url("./fonts/br_firma_extra_light-webfont.woff") format("woff");
+            font-weight: 200;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: "br_firma";
+            src: url("./fonts/br_firma_light_italic-webfont.woff2") format("woff2"), url("./fonts/br_firma_light_italic-webfont.woff") format("woff");
+            font-weight: 300;
+            font-style: italic;
+        }
+
+        @font-face {
+            font-family: "br_firma";
+            src: url("./fonts/br_firma_light-webfont.woff2") format("woff2"), url("./fonts/br_firma_light-webfont.woff") format("woff");
+            font-weight: 300;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: "br_firma";
+            src: url("./fonts/br_firma_medium_italic-webfont.woff2") format("woff2"), url("./fonts/br_firma_medium_italic-webfont.woff") format("woff");
+            font-weight: 500;
+            font-style: italic;
+        }
+
+        @font-face {
+            font-family: "br_firma";
+            src: url("./fonts/br_firma_medium-webfont.woff2") format("woff2"), url("./fonts/br_firma_medium-webfont.woff") format("woff");
+            font-weight: 500;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: "br_firma";
+            src: url("./fonts/br_firma_regular_italic-webfont.woff2") format("woff2"), url("./fonts/br_firma_regular_italic-webfont.woff") format("woff");
+            font-weight: 400;
+            font-style: italic;
+        }
+
+        @font-face {
+            font-family: "br_firma";
+            src: url("./fonts/br_firma_regular-webfont.woff2") format("woff2"), url("./fonts/br_firma_regular-webfont.woff") format("woff");
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: "br_firma";
+            src: url("./fonts/br_firma_semibold_italic-webfont.woff2") format("woff2"), url("./fonts/br_firma_semibold_italic-webfont.woff") format("woff");
+            font-weight: 600;
+            font-style: italic;
+        }
+
+        @font-face {
+            font-family: "br_firma";
+            src: url("./fonts/br_firma_semibold-webfont.woff2") format("woff2"), url("./fonts/br_firma_semibold-webfont.woff") format("woff");
+            font-weight: 600;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: "br_firma";
+            src: url("./fonts/br_firma_thin_italic-webfont.woff2") format("woff2"), url("./fonts/br_firma_thin_italic-webfont.woff") format("woff");
+            font-weight: 100;
+            font-style: italic;
+        }
+
+        @font-face {
+            font-family: "br_firma";
+            src: url("./fonts/br_firma_thin-webfont.woff2") format("woff2"), url("./fonts/br_firma_thin-webfont.woff") format("woff");
+            font-weight: 100;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: "br_firma";
+            src: url("./fonts/br_firma_black_italic-webfont.woff2") format("woff2"), url("./fonts/br_firma_black_italic-webfont.woff") format("woff");
+            font-weight: 800;
+            font-style: italic;
+        }
+
+        @font-face {
+            font-family: "br_firma";
+            src: url("./fonts/br_firma_black-webfont.woff2") format("woff2"), url("./fonts/br_firma_black-webfont.woff") format("woff");
+            font-weight: 800;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: "br_firma";
+            src: url("./fonts/br_firma_bold_italic-webfont.woff2") format("woff2"), url("./fonts/br_firma_bold_italic-webfont.woff") format("woff");
+            font-weight: 700;
+            font-style: italic;
+        }
+
+        @font-face {
+            font-family: "br_firma";
+            src: url("./fonts/br_firma_bold-webfont.woff2") format("woff2"), url("./fonts/br_firma_bold-webfont.woff") format("woff");
+            font-weight: 700;
+            font-style: normal;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 420px;
+            height: 595px;
+            position: relative;
+            background: white;
+            margin: 20px; /* Adjust margin as needed */
+        }
+
+        .header {
+            padding: 8px 27.50px;
+            position: absolute;
+            background: white;
+            border-bottom: 0.50px #E5E6E6 solid;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 197.67px;
+            display: flex;
+        }
+
+        .logo img {
+            width: 75.83px;
+            height: 20px;
+        }
+
+        .generated-info {
+            text-align: right;
+            color: #020202;
+            font-size: 8px;
+            font-family: br_firma;
+            font-weight: 400;
+            word-wrap: break-word;
+        }
+
+        .studio-info {
+            position: absolute;
+            left: 23px;
+            top: 55px;
+            color: #333333;
+            font-size: 16px;
+            font-family: br_firma;
+            font-weight: 700;
+            word-wrap: break-word;
+        }
+
+        .address-info {
+            position: absolute;
+            left: 23px;
+            top: 76px;
+            color: #333333;
+            font-size: 9px;
+            font-family: br_firma;
+            font-weight: 400;
+            line-height: 12.60px;
+            word-wrap: break-word;
+        }
+
+        .main-title {
+            position: absolute;
+            width: 252px;
+            left: 24px;
+            top: 204px;
+            color: #333333;
+            font-size: 18px;
+            font-family: br_firma;
+            font-weight: 600;
+            word-wrap: break-word;
+        }
+
+        .transactions-container {
+            position: absolute;
+            left: 24px;
+            top: 266px;
+            width: 372px;
+            height: 268px;
+            opacity: 0.80; /* Adjust opacity as needed */
+            background: white;
+            box-shadow: 0px 0px 1.7113045454025269px rgba(51, 51, 51, 0.02);
+            border: 2px #CCCCCC solid;
+            padding: 10px; /* Adjust padding as needed */
+        }
+
+        .transaction-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            border-bottom: 0.86px #CCCCCC solid;
+        }
+
+        .transaction-item div {
+            color: #676767;
+            font-size: 10px;
+            font-family: br_firma;
+            font-weight: 400;
+            line-height: 14px;
+            word-wrap: break-word;
+        }
+
+        .transaction-amount {
+            color: #020202;
+            font-size: 11.98px;
+            font-family: br_firma;
+            font-weight: 600;
+            line-height: 16.77px;
+            word-wrap: break-word;
+        }
+
+        .footer {
+            width: 420px;
+            height: 38px;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            background: #003B65;
+            justify-content: flex-start;
+            align-items: center;
+            display: flex;
+            padding-left: 26px;
+        }
+
+        .footer-text {
+            color: rgba(255, 255, 255, 0.60);
+            font-size: 9px;
+            font-family: br_firma;
+            font-weight: 400;
+            line-height: 12.60px;
+            word-wrap: break-word;
+        }
+
+        .footer-bank {
+            color: white;
+            font-size: 9px;
+            font-family: br_firma;
+            font-weight: 600;
+            line-height: 12.60px;
+            word-wrap: break-word;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <img src="https://via.placeholder.com/76x20" alt="Logo" />
+            </div>
+            <div class="generated-info">Generated on 19 Jan 2024</div>
+        </div>
+        <div class="studio-info">Notbl.ank Studio.</div>
+        <div class="address-info">20, Layi Yusuf Crescent, Lekki Lagos Nigeria</div>
+        <div class="main-title">
+            <span>Your Daily <br />Transactions Reports</span>
+        </div>
+        <div class="transactions-container">
+            <div class="transaction-item">
+                <div>All Transaction</div>
+                <div class="transaction-amount">NGN 861,200.00</div>
+            </div>
+            <div class="transaction-item">
+                <div>Failed Transaction</div>
+                <div class="transaction-amount" style="color: #DA0000;">NGN 861,200.00</div>
+            </div>
+            <div class="transaction-item">
+                <div>Successful Transactions</div>
+                <div class="transaction-amount" style="color: #107C21;">NGN 32,200.00</div>
+            </div>
+            <!-- Add more transactions as needed... -->
+        </div>
+        <div class="footer">
+            <div class="footer-text">Powered by</div>
+            <div class="footer-bank">First Bank of Nigeria</div>
+        </div>
+    </div>
+</body>
+
+</html>
