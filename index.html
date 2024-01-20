@@ -1,44 +1,383 @@
 <!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
 
-<link rel="stylesheet" type="text/css" href="./styles/main.css" />
+    <link rel="stylesheet" type="text/css" href="./styles/main.css" />
+  </head>
 
-</head>
+  <style type="text/css">
+    @font-face {
+      font-family: "br_firma";
+      src: url("./fonts/br_firma_extra_light_italic-webfont.woff2")
+          format("woff2"),
+        url("./fonts/br_firma_extra_light_italic-webfont.woff") format("woff");
+      font-weight: 200;
+      font-style: italic;
+    }
 
-<body>
-    <div class="v358_126">
-        <div class="v358_229"></div>
-        <div class="v368_98"></div>
-        <div class="v358_127"><span class="v358_128">Generated on 19 Jan 2024</span>
-            <div class="v358_129"></div>
+    @font-face {
+      font-family: "br_firma";
+      src: url("./fonts/br_firma_extra_light-webfont.woff2") format("woff2"),
+        url("./fonts/br_firma_extra_light-webfont.woff") format("woff");
+      font-weight: 200;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: "br_firma";
+      src: url("./fonts/br_firma_light_italic-webfont.woff2") format("woff2"),
+        url("./fonts/br_firma_light_italic-webfont.woff") format("woff");
+      font-weight: 300;
+      font-style: italic;
+    }
+
+    @font-face {
+      font-family: "br_firma";
+      src: url("./fonts/br_firma_light-webfont.woff2") format("woff2"),
+        url("./fonts/br_firma_light-webfont.woff") format("woff");
+      font-weight: 300;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: "br_firma";
+      src: url("./fonts/br_firma_medium_italic-webfont.woff2") format("woff2"),
+        url("./fonts/br_firma_medium_italic-webfont.woff") format("woff");
+      font-weight: 500;
+      font-style: italic;
+    }
+
+    @font-face {
+      font-family: "br_firma";
+      src: url("./fonts/br_firma_medium-webfont.woff2") format("woff2"),
+        url("./fonts/br_firma_medium-webfont.woff") format("woff");
+      font-weight: 500;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: "br_firma";
+      src: url("./fonts/br_firma_regular_italic-webfont.woff2") format("woff2"),
+        url("./fonts/br_firma_regular_italic-webfont.woff") format("woff");
+      font-weight: 400;
+      font-style: italic;
+    }
+
+    @font-face {
+      font-family: "br_firma";
+      src: url("./fonts/br_firma_regular-webfont.woff2") format("woff2"),
+        url("./fonts/br_firma_regular-webfont.woff") format("woff");
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: "br_firma";
+      src: url("./fonts/br_firma_semibold_italic-webfont.woff2") format("woff2"),
+        url("./fonts/br_firma_semibold_italic-webfont.woff") format("woff");
+      font-weight: 600;
+      font-style: italic;
+    }
+
+    @font-face {
+      font-family: "br_firma";
+      src: url("./fonts/br_firma_semibold-webfont.woff2") format("woff2"),
+        url("./fonts/br_firma_semibold-webfont.woff") format("woff");
+      font-weight: 600;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: "br_firma";
+      src: url("./fonts/br_firma_thin_italic-webfont.woff2") format("woff2"),
+        url("./fonts/br_firma_thin_italic-webfont.woff") format("woff");
+      font-weight: 100;
+      font-style: italic;
+    }
+
+    @font-face {
+      font-family: "br_firma";
+      src: url("./fonts/br_firma_thin-webfont.woff2") format("woff2"),
+        url("./fonts/br_firma_thin-webfont.woff") format("woff");
+      font-weight: 100;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: "br_firma";
+      src: url("./fonts/br_firma_black_italic-webfont.woff2") format("woff2"),
+        url("./fonts/br_firma_black_italic-webfont.woff") format("woff");
+      font-weight: 800;
+      font-style: italic;
+    }
+
+    @font-face {
+      font-family: "br_firma";
+      src: url("./fonts/br_firma_black-webfont.woff2") format("woff2"),
+        url("./fonts/br_firma_black-webfont.woff") format("woff");
+      font-weight: 800;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: "br_firma";
+      src: url("./fonts/br_firma_bold_italic-webfont.woff2") format("woff2"),
+        url("./fonts/br_firma_bold_italic-webfont.woff") format("woff");
+      font-weight: 700;
+      font-style: italic;
+    }
+
+    @font-face {
+      font-family: "br_firma";
+      src: url("./fonts/br_firma_bold-webfont.woff2") format("woff2"),
+        url("./fonts/br_firma_bold-webfont.woff") format("woff");
+      font-weight: 700;
+      font-style: normal;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: "br_firma", sans-serif;
+    }
+
+    body {
+      font-size: 14px;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      font-family: "br_firma", sans-serif;
+      font-weight: 400;
+      /* overflow-x: hidden !important; */
+      position: relative;
+      width: 100vw;
+      overscroll-behavior: none;
+      overflow-y: scroll;
+      overflow-x: hidden;
+      color: rgb(27, 27, 27);
+      /* Hide scrollbar for IE, Edge and Firefox */
+      -ms-overflow-style: none; /* IE and Edge */
+      scrollbar-width: none; /* Firefox */
+    }
+
+    .report-wrapper {
+      width: 420px;
+      height: 595px;
+      background: rgba(255, 255, 255, 1);
+      top: 0;
+      left: 0;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .report-companyr {
+      width: 100%;
+      display: flex;
+      background: linear-gradient(
+        rgba(0, 59, 101, 0.10999999940395355),
+        rgba(255, 246, 236, 0)
+      );
+      display: flex;
+      flex-direction: column;
+      padding: 55px 23px;
+
+      opacity: 1;
+      overflow: hidden;
+    }
+
+    .v368_98 {
+      width: 420px;
+      height: 380px;
+      background: rgba(255, 255, 255, 1);
+      opacity: 1;
+      position: absolute;
+      top: 178px;
+      left: 0px;
+      overflow: hidden;
+    }
+
+    .report-header {
+      width: 420px;
+      height: 36px;
+      background: rgba(255, 255, 255, 1);
+      opacity: 1;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 23px;
+    }
+
+    .report-header__title {
+      color: rgba(2, 2, 2, 1);
+      top: 13px;
+      font-size: 8px;
+      text-align: right;
+    }
+
+    .report-header__date {
+      width: 75px;
+      height: 20px;
+      background: url("../images/v358_129.png");
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+    }
+
+    .report-company {
+      width: 100%;
+      height: 33px;
+      background: url("../images/v358_130.png");
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      opacity: 1;
+      overflow: hidden;
+    }
+
+    .company-name {
+      color: rgba(51, 51, 51, 1);
+      top: 0px;
+      left: 0px;
+
+      font-weight: Bold;
+      font-size: 16px;
+      opacity: 1;
+      text-align: left;
+    }
+
+    .company-address {
+      color: rgba(51, 51, 51, 1);
+      top: 20px;
+      left: 0px;
+
+      font-weight: Regular;
+      font-size: 9px;
+      opacity: 1;
+      text-align: left;
+    }
+
+    .your-daily-trx {
+      font-size: 18px;
+      opacity: 1;
+      text-align: left;
+      padding: 0 23px;
+      color: var(--grey-800, rgba(64, 64, 64, 0.5));
+    }
+
+    .your-daily-trx p {
+      color: var(--grey-800, #333);
+      font-weight: 16px;
+    }
+
+    .footer {
+      width: 100%;
+      height: 38px;
+      background: rgba(0, 59, 101, 1);
+      opacity: 1;
+      left: 0px;
+      overflow: hidden;
+    }
+
+    .table-wrap {
+      width: 90%;
+      /* height: 100%; */
+      align-self: center;
+      margin-bottom: 23px;
+      display: flex;
+      background: rgba(255, 255, 255, 1);
+      border: 2px solid rgba(204, 204, 204, 0.3);
+      box-shadow: 0px 0px 1.711px 0px rgba(51, 51, 51, 0.02),
+        0px 0.856px 1.711px 0px rgba(51, 51, 51, 0.06);
+      overflow: hidden;
+      border-radius: 10.268px;
+      margin-top: 16px;
+      flex-direction: column;
+    }
+
+    .table-wrap__item {
+      display: flex;
+      align-items: center;
+    }
+
+    .table-wrap__item:not(:last-child) {
+      border-bottom: 2px solid rgba(204, 204, 204, 0.3);
+    }
+
+    .table-wrap__item span:first-child {
+      color: var(--RAVEN-Base-BG-Dark, #676767);
+      font-size: 10px;
+      font-style: normal;
+      width: 40%;
+      border-right: 1px solid rgba(204, 204, 204, 0.3);
+      font-weight: 400;
+      align-items: center;
+      display: flex;
+      padding-left: 9px;
+
+      position: relative;
+      height: 40px;
+    }
+
+    .table-wrap__item span:last-child {
+      color: var(--RAVEN-Base-Background-dark, #020202);
+      font-size: 11.979px;
+      font-style: normal;
+      display: flex;
+      padding-left: 9px;
+
+      font-weight: 600;
+      /* padding: 22px; */
+    }
+  </style>
+
+  <body>
+    <div class="report-wrapper">
+      <div class="report-header">
+        <div class="report-header__date"></div>
+        <span class="report-header__title">Generated on 19 Jan 2024</span>
+      </div>
+      <div class="report-companyr">
+        <span class="company-name">Notbl.ank Studio.</span
+        ><span class="company-address"
+          >20, Layi Yusuf Crescent, Lekki Lagos Nigeria</span
+        >
+      </div>
+      <span class="your-daily-trx"
+        >Your Daily
+        <p>Transactions Report</p></span
+      >
+      <div class="table-wrap">
+        <div class="table-wrap__item">
+          <span class="">All Transaction</span>
+          <span class="v358_160">NGN 861,200.00</span>
         </div>
-        <div class="v358_130"><span class="v358_131">Notbl.ank Studio.</span><span class="v358_132">20, Layi Yusuf
-                Crescent, Lekki Lagos Nigeria</span></div><span class="v358_133">Your Daily
-            Transactions Reports</span>
-        <div class="v358_155"><span class="v358_156">Powered by First Bank of Nigeria</span></div>
-        <div class="v358_157"></div>
-        <div class="v358_158"><span class="v358_159">All Transaction</span><span class="v358_160">NGN 861,200.00</span>
+
+        <div class="table-wrap__item">
+          <span class="">Failed Transaction</span
+          ><span class="">NGN 861,200.00</span>
         </div>
-        <div class="v358_161"><span class="v358_162">Failed Transaction</span><span class="v358_163">NGN
-                861,200.00</span></div>
-        <div class="v358_164"><span class="v358_165">Successful Transactions</span><span class="v358_166">NGN
-                32,200.00</span></div>
-        <div class="v358_176"><span class="v358_177">Transaction Count</span><span class="v358_178">132</span></div>
-        <div class="v358_180"><span class="v358_181">Failed Count</span><span class="v358_182">8</span></div>
-        <div class="v358_184"><span class="v358_185">Successful Count</span><span class="v358_186">124</span></div>
-        <div class="name"></div>
-        <div class="name"></div>
-        <div class="name"></div>
-        <div class="name"></div>
-        <div class="name"></div>
-        <div class="name"></div>
+        <div class="table-wrap__item">
+          <span class="">Successful Transactions</span
+          ><span class="">NGN 32,200.00</span>
+        </div>
+        <div class="table-wrap__item">
+          <span class="">Transaction Count</span><span class="">132</span>
+        </div>
+        <div class="table-wrap__item">
+          <span class="">Failed Count</span><span class="">8</span>
+        </div>
+        <div class="table-wrap__item">
+          <span class="">Successful Count</span><span class="">124</span>
+        </div>
+      </div>
+      <div class="footer">
+        <span class="v358_156">Powered by First Bank of Nigeria</span>
+      </div>
     </div>
-</body>
-
+  </body>
 </html>
